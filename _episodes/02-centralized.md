@@ -40,7 +40,7 @@ In this episode, we will explore the usage of a **centralized workflow** for col
 Features:
 
 - Typically all developers have both read and write permissions (double-headed arrows).
-- Suited for cases where **all developers are in the same group or organization or project**.
+- Suited for cases where **all developers are in the same group or organization or <span style="color:green">group </span>project**.
 - **Everybody who wants to contribute needs write access**.
 - Good idea to write-protect the main branch (typically `master` or `main`).
 
@@ -59,6 +59,7 @@ typical pitfalls.
 
 
 > ## Exercise preparation
+> <span style="color:red"> This section can be removed / replaced by custom preparation </span>
 >
 > - We form small groups (4-5 persons).
 > - Each group needs to appoint someone who will host the shared GitHub repository: *an administrator*.
@@ -102,13 +103,12 @@ typical pitfalls.
 $ git clone {{ site.centralized_workflow_exercise_url }}.git centralized-workflow-exercise
 ```
 
-Where you replace `coderefinery` by the namespace of the repository administrator.
+<span style="color:green"> Where you replace `coderefinery` by the namespace of the repository administrator. </span>
 
-Instead of using https you can also clone using ssh keys:
+<span style="color:red">Instead of using https you can also clone using ssh keys: </span>
 - [https://help.github.com/articles/connecting-to-github-with-ssh/](https://help.github.com/articles/connecting-to-github-with-ssh/)
-- [https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html](https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html)
-
-This is a representation of what happens when you clone:
+- <span style="color:red">[https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html](https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html) 
+This is a representation of what happens when you clone: </span>
 
 *remote*: ![]({{ site.baseurl }}/img/centralized/01-remote.svg)
 
@@ -122,7 +122,7 @@ This is a representation of what happens when you clone:
 - `origin` refers to where we cloned from, try: `git remote -v`.
 - `origin` is a shortcut for the full URL.
 - `origin/master` is a read-only pointer.
-- They only move during `git pull` or `git fetch` or `git push`.
+- They only move during `git pull` or `git fetch` or `git push`. <span style="color:green"> Their use will be explained in a bit </span>
 - Only `git pull` or `git fetch` or `git push` require network.
 - All other operations are local operations.
 
@@ -139,14 +139,14 @@ Try to find out where this repository was cloned from using `git remote -v`.
 #### 3. Create a branch `yourname-somefeature` pointing at your commit
 
 Create a branch from the current `master`:
-
+<span style="color:green"> Here again, comments in the code example are nice as a reminder of the command's actions</span>
 ```
 $ git branch yourname-somefeature
 $ git checkout yourname-somefeature
 ```
 
-The `yourname-` prefix has no special meaning here (not like `origin/`): it is just part of a
-branch name to indicate who made it.
+<span style="color:red"> The `yourname-` prefix has no special meaning here (not like `origin/`): it is just part of a
+branch name to indicate who made it. </span>
 
 
 #### 4. Create a file with a unique name, e.g.: `yourusername.txt`
@@ -160,6 +160,8 @@ In this file share your favourite cooking recipe or haiku or Git trick or whatev
 $ git add yourusername.txt
 $ git commit
 ```
+<span style="color:green"> In the picture below, but also in the earlier similar picture, the distinction between local 
+and remote could be more clear </span>
 
 *remote*: ![]({{ site.baseurl }}/img/centralized/01-remote.svg)
 
@@ -167,12 +169,13 @@ $ git commit
 
 
 #### 6. Push your change as a new branch
+<span style="color:green">  Here, the push command can be explained in more depth </span>
 
 ```
 $ git push origin -u yourname-somefeature
 ```
 
-Can we leave out the `-u`?
+<span style="color:red"> Can we leave out the `-u`? </span>
 
 
 #### 7. Browse the network of branches and commits
@@ -182,6 +185,7 @@ network of branches and commits and discuss with others what you see.
 
 
 #### 8. Submit a pull request
+<span style="color:green"> Pull requests could be skipped and just pulling could be treated here </span>
 
 Submit a pull request from your branch towards the `master` branch.
 Do this through the web interface.
@@ -198,6 +202,7 @@ pull request, discusses what features to look at, and how to discuss and review.
 At the same time, helpers can review open pull requests from their exercises groups.
 
 > ## Hint for breakout rooms
+> <span style="color:red"> Remove this section </span>
 >
 > If the helper in the room is the one who sets up the central repository, he/she
 > cannot easily demostrate the steps via screen-sharing as the repository's owner. A
@@ -206,12 +211,13 @@ At the same time, helpers can review open pull requests from their exercises gro
 {: .callout}
 
 > ## Discussion
+>  <span style="color:red"> This section could be skipped / changed if pull requests are not treated </span>
 >
 > ### Naming
 >
-> - In GitLab or BitBucket these are named **merge requests**, not **pull requests**.
-> - Which one do you feel is more appropriate and in which
->   context? (The name **pull request** may make more sense in the forking workflow: next episode).
+> - <span style="color:red"> In GitLab or BitBucket these are named **merge requests**, not **pull requests**. </span>    
+> - <span style="color:red"> Which one do you feel is more appropriate and in which 
+>   context? (The name **pull request** may make more sense in the forking workflow: next episode).</span>
 > - It can be useful to think of them as **change proposals**.
 >
 > ### Pull requests are from branch to branch

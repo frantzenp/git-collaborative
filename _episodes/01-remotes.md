@@ -20,7 +20,8 @@ keypoints:
 
 ## Motivation
 
-- Let's say that someone has given you access to a repository online
+- Let's say that someone has given you access to a repository online <span style="color:green"> A group member shared the 
+project repository with you</span>
 - ... and you want to contribute to it.
 - It is quite easy to make a copy and send a change back.
 - First, we do this a relatively simple way: get repository, make a change
@@ -34,19 +35,25 @@ keypoints:
 
 ## Commits, branches, repositories, forks, clones
 
+<span style="color:green"> In the previous lecture, you have seen what version control 
+can do and were introduced to the  following  </span>
+
 - **repository**: The project, contains all data and history (commits, branches, tags).
 - **commit**: Snapshot of the project, gets a unique identifier (e.g. `c7f0e8bfc718be04525847fc7ac237f470add76e`).
 - **branch**: Independent development line, often we call the main development line `master` or `main`.
 - **tag**: A pointer to one commit, to be able to refer to it later. Like a sticky note that you attach to a particular commit (e.g. `phd-printed` or `paper-submitted`).
 - **cloning**: Copying the whole repository to your laptop - the first time. It is not necessary to download each file one by one.
-- **forking**: Taking a copy of a repository (which is typically not yours) - your
-  copy (fork) stays on GitHub and you can make changes to your copy.
+- <span style="color:red">  **forking**: Taking a copy of a repository (which is typically not yours) - your
+  copy (fork) stays on GitHub and you can make changes to your copy. </span>
+- <span style="color:green"> More relevant commands / terminology could be added  </span>
 
 <img src="{{ site.baseurl }}/img/overview/fork_PN.png" width="800" style="border:2px solid #000000;"/>
 
 ---
 
 ## Generating from templates and importing
+<span style="color:red"> This section could be skipped or trimmed 
+(no image for instance, and removing the importing part) </span>
 
 There are two more ways to create "copies" of repositories into your user space:
 - A repository can be marked as **template** and new repositories can be
@@ -78,4 +85,4 @@ There are two more ways to create "copies" of repositories into your user space:
 - We will **pull** or **fetch** updates **from** remote repositories (we will soon discuss the difference between pull and fetch).
 - We will **push** updates **to** remote repositories.
 - We will learn how to suggest changes within repositories on GitHub and across repositories.
-- We will learn how to update forks by pulling/fetching changes and pushing them to forks.
+- <span style="color:red">  We will learn how to update forks by pulling/fetching changes and pushing them to forks. </span>
